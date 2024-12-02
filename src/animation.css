@@ -28,6 +28,7 @@ body {
     height: 100%;
     margin: auto;
     width: 90vw;
+    z-index: 5; /* Lower than HeroSection's z-10 */
 }
 
 .line {
@@ -38,6 +39,7 @@ body {
     left: 50%;
     background: rgba(255, 255, 255, 0.1);
     overflow: hidden;
+    z-index: 5; /* Matches container */
 }
 
 .line::after {
