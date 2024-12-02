@@ -10,7 +10,6 @@ export default {
     extend: {
       fontFamily: {
         jetbrains: ['"JetBrains Mono"', "monospace"],
-        orca: ['"Orc-A"', "sans-serif"], // Add Orc-A font
       },
     },
   },

@@ -32,7 +32,7 @@
 @layer utilities {
     /* Padding Utilities */
     .padding {
-        @apply sm:px-16 px-8 sm:py-24 py-12;
+        @apply sm:px-16 px-8 ;
     }
     .heading{
         @apply flex flex-col items-center justify-center pb-10 px-10 transition-all hover:scale-110 hover:brightness-110;
@@ -159,6 +159,8 @@
         transform: translateX(calc(-100% / 3));
     }
 }
+
+
 
 
 

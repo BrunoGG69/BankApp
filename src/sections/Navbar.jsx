@@ -1,16 +1,19 @@
 const Navbar = () => {
     return (
-        <nav className="bg-black text-white py-4 shadow-md">
-            <div className="container mx-auto flex justify-between items-center">
-                <h1 className="font-bold text-[#f48e6c] text-2xl">BrunoPay</h1>
-                <ul className="flex space-x-6">
-                    <li><a href="#home" className="text-lg hover:text-[#5fcbbc]">Home</a></li>
-                    <li><a href="#features" className="text-lg hover:text-[#5fcbbc]">Features</a></li>
-                    <li><a href="#about" className="text-lg hover:text-[#5fcbbc]">About</a></li>
-                    <li><a href="#contact" className="text-lg hover:text-[#5fcbbc]">Contact</a></li>
+        <div className="navbar bg-black  font-bold text-[#5fcbbc]">
+            <div className="flex-1">
+                <a className="btn btn-ghost text-2xl font-bold ">BrunoPay</a>
+            </div>
+            <div className="flex-none">
+                <ul className="menu menu-horizontal px-1">
+                    <li><a>Home</a></li>
+                    <li><a>About</a></li>
+                    <li><a>Pricing</a></li>
+                    <li><a>Compare</a></li>
+
                 </ul>
             </div>
-        </nav>
+        </div>
     );
 };
 
