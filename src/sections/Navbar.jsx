@@ -11,7 +11,7 @@ const Navbar = () => {
 
     return (
         <div className="navbar bg-transparent font-bold text-[#5fcbbc] relative z-30">
-            {/* Left Side Button (BrunoPay with BrunoGG) */}
+            {/* Side Button */}
             <div className="flex-1 flex items-center">
                 <a
                     className="btn btn-ghost text-2xl font-bold flex items-center"
@@ -31,7 +31,7 @@ const Navbar = () => {
             <div className="hidden lg:flex flex-none">
                 <ul className="menu menu-horizontal px-1">
                     <li>
-                        <a>Home</a>
+                        <a href="#aboutCard">Home</a>
                     </li>
                     <li>
                         <a>About</a>
@@ -55,7 +55,7 @@ const Navbar = () => {
                 </button>
             </div>
 
-            {/* Mobile Dropdown Menu */}
+            {/* Menu for Smaller Screens */}
             <div
                 className={`lg:hidden absolute top-16 right-4 bg-[#15141d] text-white p-4 rounded-lg shadow-lg ${
                     isOpen ? "block" : "hidden"
