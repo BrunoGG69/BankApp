@@ -14,6 +14,7 @@ function App() {
             <div className="padding">
                 <HeroSection/>
             </div>
+
         </main>
     );
 }

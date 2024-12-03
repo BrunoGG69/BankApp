@@ -2,7 +2,7 @@ import profilePic from "../assets/profilePic-noBackground.png";
 
 const HeroSection = () => {
     return (
-        <section className="flex flex-col  items-center justify-center min-h-[90vh] bg-black overflow-x-hidden">
+        <section className="flex flex-col  items-center justify-center min-h-screen overflow-x-hidden pb-10">
             <div className="flex flex-col items-center justify-center">
                 {/* Profile Picture and BrunoPay Logo */}
                 <div className="flex flex-row items-center justify-center mb-8">
@@ -27,7 +27,7 @@ const HeroSection = () => {
                 </div>
 
                 {/* Cards Section */}
-                <div className="relative flex sm:flex-row flex-col justify-center items-center z-10 mb-20 flex-shrink">
+                <div className="relative flex sm:flex-row flex-col justify-center items-center z-10 mb-20 flex-shrink sm:px-10">
                     {/* Left Card with Glow */}
                     <div className="relative max-sm:-mb-10 sm:mt-0 sm:-mr-12  z-20">
                         <div
