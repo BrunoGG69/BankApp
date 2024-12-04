@@ -19,7 +19,7 @@ const Navbar = () => {
                 >
                     {/* Profile Image or Icon */}
                     <img
-                        src={profilePic} // Replace with your actual profile image URL
+                        src={profilePic}
                         alt="Profile"
                         className="w-8 h-8 rounded-full mr-3"
                     />
