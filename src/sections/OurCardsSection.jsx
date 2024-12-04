@@ -17,7 +17,7 @@ const CardsSection = () => {
                     setIsInView(true);
                 }
             },
-            { threshold: 0.25 } // Trigger when 25% of the section is visible
+            { threshold: 0.1 } // Trigger when 25% of the section is visible
         );
 
         if (sectionRef.current) {

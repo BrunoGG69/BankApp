@@ -1,8 +1,30 @@
-# React + Vite
+# BrunoPay - For Coders, By Coders
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### This is a mockup Credit Card Website. Visit it on https://pay.brunogg.in
 
-Currently, two official plugins are available:
+## Technologies used:
+- HTML
+- CSS
+- JavaScript
+- Tailwind CSS
+- Framer Motion (Animation)
+- React
+- DaisyUI (components)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+- Responsive and Modern design
+- Dark mode
+- Smooth animations
+
+## How to run the project locally (I recommend visiting it on https://brunogg.in)
+1. Clone the repository
+2. Run **npm install**
+    ```bash
+    npm install
+    ```
+3. Run **npm run dev**
+    ```bash
+    npm run dev
+    ```
+
+## BrunoPay © 2024 by Prathamesh Prabhakar is licensed under CC BY-NC-ND 4.0 
