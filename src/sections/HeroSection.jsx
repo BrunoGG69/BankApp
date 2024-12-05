@@ -1,13 +1,10 @@
 import profilePic from "../assets/profilePic-noBackground.png";
 import { motion } from "motion/react";
-
-import kernelCard from "/cards/kernel-card.svg";
-import quantumCard from "/cards/quantum-card.svg";
-import scriptCard from "/cards/script-card.svg";
+import { cardImages, heroContent } from '../constants';
 
 const HeroSection = () => {
     return (
-        <section className="flex flex-col items-center justify-center min-h-screen overflow-x-hidden pb-10" id="heroSection">
+        <section id="heroSection" className="flex flex-col items-center justify-center min-h-screen overflow-x-hidden pb-10 pt-16">
             <motion.div
                 className="flex flex-col items-center justify-center"
                 initial={{ opacity: 0 }}
@@ -38,10 +35,10 @@ const HeroSection = () => {
                         transition={{ duration: 1, delay: 0.5 }}
                     >
                         <h1 className="text-4xl lg:text-6xl font-bold text-[#f48e6c] transition-all hover:scale-110 hover:brightness-110">
-                            BrunoPay
+                            {heroContent.title}
                         </h1>
                         <p className="text-xl mt-2 text-[#5fcbbc] transition-all hover:scale-110 hover:brightness-110">
-                            For Coders, By Coders
+                            {heroContent.subtitle}
                         </p>
                     </motion.div>
                 </div>
@@ -57,7 +54,7 @@ const HeroSection = () => {
                     >
                         <div className="absolute top-0 left-0 w-full h-full bg-[#5fcbbc] blur-2xl rounded-lg opacity-30 z-10"></div>
                         <img
-                            src={kernelCard}
+                            src={cardImages.kernelCard}
                             alt="Left Card"
                             className="w-[300px] lg:w-[400px] relative z-20 transition-all hover:scale-110 hover:brightness-110"
                         />
@@ -72,7 +69,7 @@ const HeroSection = () => {
                     >
                         <div className="absolute top-0 left-0 w-full h-full bg-[#9067c6] blur-3xl rounded-lg opacity-40 z-20"></div>
                         <img
-                            src={quantumCard}
+                            src={cardImages.quantumCard}
                             alt="Main Card"
                             className="w-[350px] lg:w-[450px] relative z-30 transition-all hover:scale-110 hover:brightness-110"
                         />
@@ -87,7 +84,7 @@ const HeroSection = () => {
                     >
                         <div className="absolute top-0 left-0 w-full h-full bg-[#5fcbbc] blur-2xl rounded-lg opacity-30 z-10"></div>
                         <img
-                            src={scriptCard}
+                            src={cardImages.scriptCard}
                             alt="Right Card"
                             className="w-[300px] lg:w-[400px] relative z-20 transition-all hover:scale-110 hover:brightness-110"
                         />
@@ -99,3 +96,6 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
+
+

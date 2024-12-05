@@ -1,9 +1,6 @@
 import {useEffect, useRef, useState} from 'react';
 import {motion} from 'motion/react';
-
-import kernelCard from "/cards/kernel-card.svg";
-import quantumCard from "/cards/quantum-card.svg";
-import scriptCard from "/cards/script-card.svg";
+import { cardImages, aboutContent } from '../constants';
 
 const AboutSection = () => {
     const [isInView, setIsInView] = useState(false);
@@ -33,7 +30,9 @@ const AboutSection = () => {
 
     return (
         <div
-            className="flex flex-col lg:flex-row items-center justify-center min-h-screen relative overflow-hidden p-8" id="#aboutCard">
+            id="aboutCard"
+            className="flex flex-col lg:flex-row items-center justify-center min-h-screen relative overflow-hidden p-8 pt-16"
+        >
             {/* Text Content */}
             <motion.div ref={textRef} className="pb-20 mx-auto">
                 {/* Heading Animation */}
@@ -47,7 +46,7 @@ const AboutSection = () => {
                     transition={{duration: 0.8, delay: 0.1, ease: "easeOut"}}
                 >
                     <h1 className="text-5xl lg:text-6xl font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-transparent bg-clip-text">
-                        The Future Of Payments
+                        {aboutContent.title}
                     </h1>
                 </motion.div>
                 {/* Paragraph Animation */}
@@ -60,8 +59,7 @@ const AboutSection = () => {
                     transition={{duration: 0.8, delay: 0.2, ease: "easeOut"}}
                 >
                     <p className="text-gray-300 text-lg lg:text-xl max-w-lg">
-                        Experience the next generation of financial technology with our innovative payment solutions.
-                        Seamlessly integrating cutting-edge security and unparalleled convenience.
+                        {aboutContent.description}
                     </p>
                 </motion.div>
                 <br/>
@@ -75,30 +73,16 @@ const AboutSection = () => {
                     }}
                     transition={{duration: 0.8, delay: 0.3, ease: "easeOut"}}
                 >
-                    <li className="flex items-center">
-                        <svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor"
-                             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
-                                  d="M5 13l4 4L19 7"></path>
-                        </svg>
-                        Quantum-level encryption for ultimate security
-                    </li>
-                    <li className="flex items-center">
-                        <svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor"
-                             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
-                                  d="M5 13l4 4L19 7"></path>
-                        </svg>
-                        Lightning-fast transactions across the globe
-                    </li>
-                    <li className="flex items-center">
-                        <svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor"
-                             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
-                                  d="M5 13l4 4L19 7"></path>
-                        </svg>
-                        Seamless integration with existing financial systems
-                    </li>
+                    {aboutContent.features.map((feature, index) => (
+                        <li key={index} className="flex items-center">
+                            <svg className="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor"
+                                 viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                                      d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            {feature}
+                        </li>
+                    ))}
                 </motion.ul>
             </motion.div>
 
@@ -113,7 +97,7 @@ const AboutSection = () => {
                     <div className="absolute transform rotate-[25deg] -translate-x-[60px] -translate-y-[30px] origin-bottom-right transition-all duration-300 hover:-translate-y-[40px] group">
                         <div className="absolute inset-0 bg-[#ff7e5f] opacity-50 blur-[20px] transition-opacity group-hover:opacity-70"/>
                         <img
-                            src={scriptCard}
+                            src={cardImages.scriptCard}
                             alt="Script Card"
                             className="w-[400px] lg:w-[500px] relative z-20"
                         />
@@ -121,7 +105,7 @@ const AboutSection = () => {
                     <div className="absolute transform rotate-[12deg] -translate-x-[30px] -translate-y-[15px] origin-bottom-right transition-all duration-300 hover:-translate-y-[25px] group">
                         <div className="absolute inset-0 bg-[#4ecdc4] opacity-50 blur-[20px] transition-opacity group-hover:opacity-70"/>
                         <img
-                            src={kernelCard}
+                            src={cardImages.kernelCard}
                             alt="Kernel Card"
                             className="w-[400px] lg:w-[500px] relative z-30"
                         />
@@ -129,7 +113,7 @@ const AboutSection = () => {
                     <div className="relative z-40 transform origin-bottom-right transition-all duration-300 hover:-translate-y-[10px] group">
                         <div className="absolute inset-0 bg-[#a855f7] opacity-50 blur-[20px] transition-opacity group-hover:opacity-70"/>
                         <img
-                            src={quantumCard}
+                            src={cardImages.quantumCard}
                             alt="Quantum Card"
                             className="w-[400px] lg:w-[500px] relative z-40"
                         />
@@ -141,3 +125,4 @@ const AboutSection = () => {
 };
 
 export default AboutSection;
+

@@ -3,6 +3,7 @@ import Navbar from "./sections/Navbar.jsx";
 import HeroSection from "./sections/HeroSection.jsx";
 import AboutSection from "./sections/AboutSection.jsx";
 import Features from "./sections/OurCardsSection.jsx";
+import AnnualPlanSection from "./sections/AnnualPlanSection.jsx";
 
 function App() {
     return (
@@ -22,7 +23,9 @@ function App() {
             <div className="padding">
                 <Features/>
             </div>
-
+            <div className="padding">
+                <AnnualPlanSection/>
+            </div>
         </main>
     );
 }
