@@ -4,6 +4,7 @@ import HeroSection from "./sections/HeroSection.jsx";
 import AboutSection from "./sections/AboutSection.jsx";
 import Features from "./sections/OurCardsSection.jsx";
 import AnnualPlanSection from "./sections/AnnualPlanSection.jsx";
+import Footer from "./sections/Footer.jsx";
 
 function App() {
     return (
@@ -26,6 +27,10 @@ function App() {
             <div className="padding">
                 <AnnualPlanSection/>
             </div>
+            <div  className="z-30">
+                <Footer/>
+            </div>
+
         </main>
     );
 }
